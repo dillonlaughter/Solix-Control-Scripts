@@ -4,7 +4,7 @@ var awpath = document.querySelector("#ctl00_GeneralContentPlaceHolder_Login1 > t
 var side1 = document.createElement('td');
 var side2 = document.createElement('td');
 var PatBut = document.createElement('Button');
-PatBut.innerHTML = "Patrick";
+PatBut.innerHTML = "Patric";
 PatBut.id = 'patrickButton';
 PatBut.style = "width:50%;font-size:9px;color:#000084;font-family:Verdana;font-variant:small-caps;font-weight:bold" ;
 PatBut.onclick = function(){var a='pres0714';var b='Donner@1';document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_UserName').value = a;document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_Password').value = b;document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_LoginButton').click();};
