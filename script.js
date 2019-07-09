@@ -72,7 +72,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Source/CallCenterHomeP
 var countdown = setInterval(countee,500);
 function countee(){
 if (document.getElementById('resetButton')==null) {
-clearInterval(countdown);
+clearInterval(countee);
 floater = document.querySelector("#aspnetForm");
 if (document.getElementsByClassName('rtLi first').length == 0){
     var cpreverse = document.createElement('li');
@@ -84,13 +84,15 @@ if (document.getElementsByClassName('rtLi first').length == 0){
     cpspace.innerHTML = ' ';
     var cpfirstlabel = document.createElement('span');
     cpfirstlabel.className = 'rtIn';
-    if (typeof reversetoggle === 'undefined'||reversetoggle ==0){
+    if (typeof reversetoggle === 'undefined'){
         cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle';
         reversetoggle = 0;
         }
     else{
+        if (reversetoggle == 1){
         cpfirst.innerText = '\uD83D\uDCD7 Reverse Toggle';
         reversefunction();
+            }
         }
        
     cpreverse.appendChild(cpfirst);
@@ -171,7 +173,10 @@ document.querySelector("#ctl00_mnuWLL > ul > li.rtLi.first > div").addEventListe
     if (typeof reversetoggle === 'undefined' || reversetoggle == 0){
         reversetoggle = 1;
         cpfirst.innerText = '\uD83D\uDCD7 Reverse Toggle';}
-    else{reversetoggle = 0;cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle';}
+    else{
+        reversetoggle = 0;
+        cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle';
+    }
         
                             
     
