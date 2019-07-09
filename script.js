@@ -84,13 +84,20 @@ if (document.getElementsByClassName('rtLi first').length == 0){
     cpspace.innerHTML = ' ';
     var cpfirstlabel = document.createElement('span');
     cpfirstlabel.className = 'rtIn';
-    cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle'
+    if (typeof reversetoggle === 'undefined'||reversetoggle ==0){
+        cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle';
+        reversetoggle = 0;
+        }
+    else{
+        cpfirst.innerText = '\uD83D\uDCD7 Reverse Toggle';
+        reversefunction();
+        
     cpreverse.appendChild(cpfirst);
     cpfirst.appendChild(cpspace);
     cpfirst.appendChild(cpfirstlabel);
     document.querySelector("#ctl00_mnuWLL > ul").appendChild(cpreverse);
     }
-if (typeof reversetoggle === 'undefined'){var none = 0}else{if (reversetoggle ==1){reversefunction()}}
+//if (typeof reversetoggle === 'undefined'){var none = 0}else{if (reversetoggle ==1){reversefunction()}}
 var buttonaddpath = document.querySelector("#ctl00_MainPlaceHolder_pnlSearch > table > tbody");
 var searchpath = document.querySelector("#ctl00_MainPlaceHolder_pnlSearch > table > tbody > tr:nth-child(11) > td.errortext");
 var cppath = document.querySelector("#ctl00_MainPlaceHolder_pnlSearch > table > tbody > tr:nth-child(2) > td:nth-child(2)");
