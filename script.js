@@ -66,11 +66,31 @@ document.getElementById("dillonButton").addEventListener("click", function(event
 }
 //##search, button to count, countdown, button to reset, clear
 if (window.location['href'] == 'https://solixlifeline.com/Source/CallCenterHomePage.aspx'){
+//#outside contant loop
+    
+//#inside constant loop
 var countdown = setInterval(countee,500);
 function countee(){
 if (document.getElementById('resetButton')==null) {
 clearInterval(countee);
 floater = document.querySelector("#aspnetForm");
+if (document.getElementsByClassName('rtLi first').length == 0){
+    var cpreverse = document.createElement('li');
+    cpreverse.className = 'rtLi first';
+    var cpfirst = document.createElement('div');
+    cpfirst.className = 'rtFirst';
+    var cpspace = document.createElement('span');
+    cpspace.className = 'rtSp';
+    cpspace.innerHTML = ' ';
+    var cpfirstlabel = document.createElement('span');
+    cpfirstlabel.className = 'rtIn';
+    cpfirst.innerText = '\uD83E\uDDE1 Reverse Toggle'
+    cpreverse.appendChild(cpfirst);
+    cpfirst.appendChild(cpspace);
+    cpfirst.appendChild(cpfirstlabel);
+    document.querySelector("#ctl00_mnuWLL > ul").appendChild(cpreverse);
+    }
+if (typeof reversetoggle === 'undefined'){var none = 0}else{if (reversetoggle ==1){reversefunction()}}
 var buttonaddpath = document.querySelector("#ctl00_MainPlaceHolder_pnlSearch > table > tbody");
 var searchpath = document.querySelector("#ctl00_MainPlaceHolder_pnlSearch > table > tbody > tr:nth-child(11) > td.errortext");
 var cppath = document.querySelector("#ctl00_MainPlaceHolder_pnlSearch > table > tbody > tr:nth-child(2) > td:nth-child(2)");
@@ -85,9 +105,9 @@ var refreshtimebut = document.createElement('Button');
 var awcontrolpanelbut = document.createElement('Button');
 counttotalbut.innerHTML = 'Weekly Count';
 refreshtimebut.innerHTML = 'Refresh Time';
-awcontrolpanelbut.innerHTML = 'Reverse';
+awcontrolpanelbut.innerHTML = 'CP';
 countbut.innerHTML = 'Count';
-resetbut.innerHTML = 'Reset';
+resetbut.innerHTML = 'No Limit';
 countdownbut.innerHTML = 'NaN';
 counttotalbut.id = 'counttotalButton';
 refreshtimebut.id = 'refreshtimeButton';
@@ -104,7 +124,7 @@ awcontrolpanelbut.style = 'font-size:9px;color:#000084;font-family:Verdana;font-
 searchpath.appendChild(countbut);
 searchpath.appendChild(countdownbut);
 searchpath.appendChild(resetbut);
-cppath.appendChild(awcontrolpanelbut);
+//##cppath.appendChild(awcontrolpanelbut);
 var calendarredate = document.createElement('Button');
 calendarredate.id = 'calendarRedate';
 calendarredate.innerHTML = '<img src="../App_Themes/Default/Calendar/datePickerPopup.gif" /input type="color" value="#000fff" >';
@@ -116,26 +136,67 @@ document.querySelector("#ctl00_MainPlaceHolder_radtbDate_wrapper > table").style
 document.querySelector("#ctl00_MainPlaceHolder_radtbDate_dateInput_text").stlye = 'width:55%';
 
 
+
 //##add code here
+function reversefunction() {
+        function reverseTableRows(tableId) {
+        var table = document.getElementById(tableId),
+            newTbody = document.createElement('tbody'),
+            oldTbody = table.tBodies[0],
+            rows = oldTbody.rows,
+            i = rows.length - 1;
 
-document.getElementById('awcontrolpanelButton').addEventListener('click',function(event){
+        while (i >= 0) {
+            newTbody.appendChild(rows[i]);
+            i -= 1;
+        }
+        oldTbody.parentNode.replaceChild(newTbody, oldTbody);
+        }
+        reverseTableRows('ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00')
+        cpfirst.innerText = '\uD83D\uDC9A Reverse Toggle';
+        
+    }
+
+
+document.querySelector("#ctl00_mnuWLL > ul > li.rtLi.first > div").addEventListener('click',function(event){
     event.preventDefault();
-    function reverseTableRows(tableId) {
-    var table = document.getElementById(tableId),
-        newTbody = document.createElement('tbody'),
-        oldTbody = table.tBodies[0],
-        rows = oldTbody.rows,
-        i = rows.length - 1;
-
-    while (i >= 0) {
-        newTbody.appendChild(rows[i]);
-        i -= 1;
-    }
-    oldTbody.parentNode.replaceChild(newTbody, oldTbody);
-    }
-    reverseTableRows('ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00')
-
+    if (typeof reversetoggle === 'undefined' || reversetoggle == 0){
+        reversetoggle = 1;
+        cpfirst.innerText = '\uD83D\uDC9A Reverse Toggle';}
+    else{reversetoggle = 0;cpfirst.innerText = '\uD83E\uDDE1 Reverse Toggle';}
+        
+                            
+    
     })
+
+
+
+/*document.getElementById('awcontrolpanelButton').addEventListener('click',function(event){
+    event.preventDefault();
+    console.log(1)
+    //######### Control Panel Stuff
+
+
+//##Reverse Button
+    var cpreverse = document.createElement('li');
+    cpreverse.className = 'rtLi first';
+    var cpfirst = document.createElement('div');
+    cpfirst.className = 'rtFirst';
+    var cpspace = document.createElement('span');
+    cpspace.className = 'rtSp';
+    cpspace.innerHTML = ' ';
+    var cpfirstlabel = document.createElement('span');
+    cpfirstlabel.className = 'rtIn';
+    cpfirst.innerText = '\uD83E\uDDE1 Reverse Toggle'
+    cpreverse.appendChild(cpfirst);
+    cpfirst.appendChild(cpspace);
+    cpfirst.appendChild(cpfirstlabel);
+    document.querySelector("#ctl00_mnuWLL > ul").appendChild(cpreverse);
+//#"\uD83D\uDC9A" (Green) # "\uD83E\uDDE1" (red)
+})*/
+
+//##Reverse Toggle
+
 document.getElementById('calendarRedate').addEventListener('click',function(event){
     event.preventDefault();
     var raddate = document.getElementById('ctl00_MainPlaceHolder_radtbDate_dateInput').value;
