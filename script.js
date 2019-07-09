@@ -106,6 +106,7 @@ searchpath.appendChild(countdownbut);
 searchpath.appendChild(resetbut);
 cppath.appendChild(awcontrolpanelbut);
 var calendarredate = document.createElement('Button');
+calendarredate.id = 'calendarRedate';
 calendarredate.innerHTML = '<img src="../App_Themes/Default/Calendar/datePickerPopup.gif" /input type="color" value="#000fff" >';
 calendarredate.style = 'width:0px;border:0px;margin-top:4px;background-color:white'
 document.querySelector("#ctl00_MainPlaceHolder_radtbDate_wrapper > table > tbody > tr").appendChild(calendarredate);
