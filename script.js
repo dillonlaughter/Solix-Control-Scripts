@@ -105,6 +105,14 @@ searchpath.appendChild(countbut);
 searchpath.appendChild(countdownbut);
 searchpath.appendChild(resetbut);
 cppath.appendChild(awcontrolpanelbut);
+var calendarredate = document.createElement('Button');
+calendarredate.innerHTML = '<img src="../App_Themes/Default/Calendar/datePickerPopup.gif" /input type="color" value="#000fff" >';
+calendarredate.style = 'width:0px;border:0px;margin-top:4px;background-color:white'
+document.querySelector("#ctl00_MainPlaceHolder_radtbDate_wrapper > table > tbody > tr").appendChild(calendarredate);
+    
+//######Calandar redate stuff
+document.querySelector("#ctl00_MainPlaceHolder_radtbDate_wrapper > table").style = 'width:130%';
+document.querySelector("#ctl00_MainPlaceHolder_radtbDate_dateInput_text").stlye = 'width:55%';
 
 
 //##add code here
@@ -127,7 +135,22 @@ document.getElementById('awcontrolpanelButton').addEventListener('click',functio
     reverseTableRows('ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00')
 
     })
-                                                             
+document.getElementById('calendarRedate').addEventListener('click',function(event){
+    event.preventDefault();
+    var raddate = document.getElementById('ctl00_MainPlaceHolder_radtbDate_dateInput').value;
+         var sp = '-';
+         var today = new Date();
+         var dd = today.getDate();
+         var mm = today.getMonth()+1;
+         var yyyy = today.getFullYear();
+         if(dd<10) dd='0'+dd;
+         if(mm<10) mm='0'+mm;
+         var curday = (yyyy + sp + mm + sp + dd + '-00-00-00');
+         if (raddate != curday){
+              document.getElementById('ctl00_MainPlaceHolder_radtbDate_dateInput').value = curday;
+              document.getElementById('ctl00_MainPlaceHolder_btnSearch').click();
+              }
+         });                                                             
 document.getElementById('resetButton').addEventListener('click',function(event){
         function clearandrefresh() {
             document.getElementById('ctl00_MainPlaceHolder_hidLastSearchTimeStamp').value = (new Date().getMinutes()+60)*60+ new Date().getSeconds()-61
