@@ -162,8 +162,8 @@ document.querySelector("#ctl00_mnuWLL > ul > li.rtLi.first > div").addEventListe
     event.preventDefault();
     if (typeof reversetoggle === 'undefined' || reversetoggle == 0){
         reversetoggle = 1;
-        cpfirst.innerText = '\uD83D\uDC9A Reverse Toggle';}
-    else{reversetoggle = 0;cpfirst.innerText = '\uD83E\uDDE1 Reverse Toggle';}
+        cpfirst.innerText = '\uD83D\uDCD7 Reverse Toggle';}
+    else{reversetoggle = 0;cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle';}
         
                             
     
@@ -187,7 +187,7 @@ document.querySelector("#ctl00_mnuWLL > ul > li.rtLi.first > div").addEventListe
     cpspace.innerHTML = ' ';
     var cpfirstlabel = document.createElement('span');
     cpfirstlabel.className = 'rtIn';
-    cpfirst.innerText = '\uD83E\uDDE1 Reverse Toggle'
+    cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle'
     cpreverse.appendChild(cpfirst);
     cpfirst.appendChild(cpspace);
     cpfirst.appendChild(cpfirstlabel);
