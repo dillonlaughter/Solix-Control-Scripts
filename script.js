@@ -91,7 +91,8 @@ if (document.getElementsByClassName('rtLi first').length == 0){
     else{
         cpfirst.innerText = '\uD83D\uDCD7 Reverse Toggle';
         reversefunction();
-        
+        }
+       
     cpreverse.appendChild(cpfirst);
     cpfirst.appendChild(cpspace);
     cpfirst.appendChild(cpfirstlabel);
