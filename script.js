@@ -93,6 +93,9 @@ if (document.getElementsByClassName('rtLi first').length == 0){
         cpfirst.innerText = '\uD83D\uDCD7 Reverse Toggle';
         reversefunction();
             }
+        else {
+            cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle';
+            }
         }
        
     cpreverse.appendChild(cpfirst);
@@ -163,7 +166,7 @@ function reversefunction() {
         oldTbody.parentNode.replaceChild(newTbody, oldTbody);
         }
         reverseTableRows('ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00')
-        cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle';
+        //cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle';
         
     }
 
