@@ -72,7 +72,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Source/CallCenterHomeP
 var countdown = setInterval(countee,500);
 function countee(){
 if (document.getElementById('resetButton')==null) {
-clearInterval(countee);
+clearInterval(countdown);
 floater = document.querySelector("#aspnetForm");
 if (document.getElementsByClassName('rtLi first').length == 0){
     var cpreverse = document.createElement('li');
