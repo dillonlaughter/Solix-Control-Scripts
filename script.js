@@ -84,7 +84,7 @@ if (document.getElementsByClassName('rtLi first').length == 0){
     cpspace.innerHTML = ' ';
     var cpfirstlabel = document.createElement('span');
     cpfirstlabel.className = 'rtIn';
-    cpfirst.innerText = '\uD83E\uDDE1 Reverse Toggle'
+    cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle'
     cpreverse.appendChild(cpfirst);
     cpfirst.appendChild(cpspace);
     cpfirst.appendChild(cpfirstlabel);
