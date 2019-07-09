@@ -180,6 +180,7 @@ document.querySelector("#ctl00_mnuWLL > ul > li.rtLi.first > div").addEventListe
         reversetoggle = 0;
         cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle';
     }
+    reversefunction();
         
                             
     
