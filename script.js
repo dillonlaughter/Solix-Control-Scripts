@@ -153,7 +153,7 @@ function reversefunction() {
         oldTbody.parentNode.replaceChild(newTbody, oldTbody);
         }
         reverseTableRows('ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00')
-        cpfirst.innerText = '\uD83D\uDC9A Reverse Toggle';
+        cpfirst.innerText = '\uD83D\uDD34 Reverse Toggle';
         
     }
 
