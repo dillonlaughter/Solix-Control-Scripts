@@ -390,4 +390,8 @@ for (i=0;i<$("td:contains(Complete)").length;i++) {
         customers +=1}};if (customers != 0||customers != '0'){clearInterval(finishvar);alert(customers)};
     ;}});
 }}
+now = (new Date().getMinutes()+60)*60+ new Date().getSeconds();
+old = document.getElementById('ctl00_MainPlaceHolder_hidLastSearchTimeStamp').value;
+time = ((now-old-60)*-1)%60;
+document.getElementById('countdownButton').innerHTML = time;
 }
