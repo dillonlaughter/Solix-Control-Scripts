@@ -357,7 +357,7 @@ document.getElementById('calendarRedate').addEventListener('click',function(even
          });                                                             
 document.getElementById('resetButton').addEventListener('click',function(event){
         function clearandrefresh() {
-            document.getElementById('ctl00_MainPlaceHolder_hidLastSearchTimeStamp').value = (new Date().getMinutes()+60)*60+ new Date().getSeconds()-61
+            document.getElementById('ctl00_MainPlaceHolder_hidLastSearchTimeStamp').value = (new Date().getMinutes())*60+ new Date().getSeconds()-61
             }
         setInterval(clearandrefresh,500);
         var countdown = setInterval(countee,500);
