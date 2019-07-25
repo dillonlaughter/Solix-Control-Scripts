@@ -4,5 +4,6 @@ var otherpeople = {
   'pres0718' : ['Angela' , 'Hurley@1'],
   'pres0720' : ['Allen' , 'Borillo@1'],
   'pres0721' : ['Alicia' , 'Altamirano@1'],
-  'pres0722' : ['Jorge' , 'Cuellar@1']
+  'pres0722' : ['Jorge' , 'Cuellar@1'],
+  'pres0724' : ['Albert' , 'Song@111']
   }
