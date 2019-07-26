@@ -90,9 +90,14 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
         /*        function importotherpeople(){
                         document.body.appendChild(document.createElement('script')).src='https://combinatronics.com/dillonlaughter/Solix-Control-Scripts/master/Employees';}
                     importotherpeople()
-        */            
-        //##        var otherpeople = {'pres0704':['Dillon','Laughter@1'],'pres0714':['Patrick','Donner@1']};
-                document.getElementById('otherButton').addEventListener('click',function(event){
+        */        
+  
+                
+               // new button start
+                
+                /*
+                ##        var otherpeople = {'pres0704':['Dillon','Laughter@1'],'pres0714':['Patrick','Donner@1']};
+.getElementById('otherButton').addEventListener('click',function(event){
                     event.preventDefault();
                     //##insert variable 'otherpeople' from github page
 
@@ -125,26 +130,84 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                                 table_row.style.background = '#EDEDC8';
                                 table_row1 = document.createElement('td');
                                 table_row1.align = 'center';
-                                table_row1.colspan = '2';
-                                table_row1.innerText = otherpeople[Object.keys(otherpeople)[i]][0];
-                                table_row1.id = 'toolbaroption_'+i;
-                                table_row1.style.padding = '4px';
-                                table_row.appendChild(table_row1);
-                                tablebodyarray.push(table_row)
-                                }
-                            if (i%2==1&&i>3){
+                                
+                                
+                        tablestart.appendChild(tabletable);
+                        tabletable.appendChild(tablehead);
+                        tabletable.appendChild(tablebody);
+                        tablehead.appendChild(tabletitle);
+                        tabletitle.appendChild(tabletitle1);
+                        for (i=0;i<tablebodyarray.length;i++){
+                            tablebody.appendChild(tablebodyarray[i]);
+                            }
+                        tabletitle1.appendChild(tabletitle2);
+                        document.querySelector("body").insertBefore(tablestart,document.querySelector("#aspnetForm"))
+                        tabletitle1.style.paddingLeft = (((tablestart.style.width.replace('px','') - tabletitle2.offsetWidth)/2) - 2).toString()+'px'
+                        tabletitle1.style.paddingRight = (((tablestart.style.width.replace('px','') - tabletitle2.offsetWidth)/2) - 2).toString()+'px'
+
+                        for (i=0;i<tablebodyarray.length;i++){
+                            eachelement.push(document.getElementById('toolbaroption_'+(i+4)))
+                            }
+
+                        eachelement.forEach(function(butto,index){
+                            butto.addEventListener('click', function() {
+                                document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_UserName').value = Object.keys(otherpeople)[(index+4)];
+                                document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_Password').value = otherpeople[Object.keys(otherpeople)[(index+4)]][1];
+                                document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_LoginButton').click();
+                        })})
+
+
+                        //##document.getElementById('toolbaroption_0').addEventListener('click',function(event){console.log('click')})
+                        }
+                    else{
+                        toolbaractive = 0;
+                        document.querySelector("body > td").remove()
+                        }
+
+
+                    });
+            }
+            }
+                           
+
+
+                
+     */           
+        //##        var otherpeople = {'pres0704':['Dillon','Laughter@1'],'pres0714':['Patrick','Donner@1']};
+.getElementById('otherButton').addEventListener('click',function(event){
+                    event.preventDefault();
+                    //##insert variable 'otherpeople' from github page
+
+
+        //##            var otherpeople = {'pres0704':['Dillon','1'],'pres0714':['Patrick','11'],'pres0718':['Angela','111']};
+                    if (typeof toolbaractive === 'undefined' || toolbaractive == 0){
+                        toolbaractive = 1
+                        whereto = document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td");
+                        tablestart = document.createElement('td');
+                        tablestart.style = 'position:fixed;left:'+xioffset+'px;top:'+yioffset+'px;width:150px;border-top:0;border-style:solid;border-width:1px;border-color:#89978F;background:#99A992;border-width: 3px 1px 3px 2px;border-color: rgba(153, 169, 146, 1);'
+                        tabletable = document.createElement('table');
+                        tabletable.cellPadding = '0';
+                        tablehead = document.createElement('thead');
+                        tablehead.style = 'display:table-header-group;vertical-align:middle;border-color:#000;';
+                        tabletitle = document.createElement('tr');
+                        tabletitle1 = document.createElement('td');
+                        tabletitle2 = document.createElement('span');
+                        tabletitle1.align = 'center';
+                        tabletitle1.colspan = '2';
+                        tabletitle2.innerText = 'Other Employees';
+                        tabletitle2.style = 'border-color:#000084;color: rgb(0, 0, 132);';
+                        //tabletitle2.style.padding = '4px';
+                        tablebody = document.createElement('tbody');
+                        tablebody.style = 'display:table-header-group;vertical-align:middle;border-color:#000';
+                        tablebodyarray = []
+                        eachelement = []
+                        for (i=0;i<Object.keys(otherpeople).length;i++){
+                            if (i%2==0&&i>3){
                                 table_row = document.createElement('tr');
-                                table_row.style.background = '#FFFDF4';
+                                table_row.style.background = '#EDEDC8';
                                 table_row1 = document.createElement('td');
                                 table_row1.align = 'center';
-                                table_row1.colspan = '2';
-                                table_row1.innerText = otherpeople[Object.keys(otherpeople)[i]][0];
-                                table_row1.id = 'toolbaroption_'+i;
-                                table_row1.style.padding = '4px';
-                                table_row.appendChild(table_row1);
-                                tablebodyarray.push(table_row)
-                                }
-                            }
+
 
                         tablestart.appendChild(tabletable);
                         tabletable.appendChild(tablehead);
