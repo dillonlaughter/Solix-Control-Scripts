@@ -117,6 +117,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
 //above needs to change
                         tablestartdisc = document.createElement('td');
                         tablestartdisc.style = 'position:fixed;left:'+xioffsetdisc+'px;top:'+yioffsetdisc+'px;width:150px;border-top:0;border-style:solid;border-width:1px;border-color:#89978F;background:#99A992;border-width: 3px 1px 3px 2px;border-color: rgba(153, 169, 146, 1);'
+                        tablestartdisc.id='tablemaindisc';
                         tabletabledisc = document.createElement('table');
                         tabletabledisc.cellPadding = '0';
                         tableheaddisc = document.createElement('thead');
@@ -209,6 +210,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                         whereto = document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td");
                         tablestart = document.createElement('td');
                         tablestart.style = 'position:fixed;left:'+xioffset+'px;top:'+yioffset+'px;width:150px;border-top:0;border-style:solid;border-width:1px;border-color:#89978F;background:#99A992;border-width: 3px 1px 3px 2px;border-color: rgba(153, 169, 146, 1);'
+                        tablestart.id='tablemain';
                         tabletable = document.createElement('table');
                         tabletable.cellPadding = '0';
                         tablehead = document.createElement('thead');
