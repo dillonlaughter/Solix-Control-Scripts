@@ -109,7 +109,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
 
 
         //##            var otherpeople = {'pres0704':['Dillon','1'],'pres0714':['Patrick','11'],'pres0718':['Angela','111']};
-                    if (typeof toolbaractive === 'undefined' || toolbaractive == 0 || typeof toolbaractivedisc === 'undefined || toolbaractivedisc ==0){
+                    if (typeof toolbaractive === 'undefined' || toolbaractive == 0 || typeof toolbaractivedisc === 'undefined' || toolbaractivedisc ==0){
                         toolbaractivedisc = 1
                         wheretodisc = document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td");
 //above needs to change
