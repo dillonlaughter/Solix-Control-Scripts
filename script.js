@@ -111,13 +111,13 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
 
 
         //##            var otherpeople = {'pres0704':['Dillon','1'],'pres0714':['Patrick','11'],'pres0718':['Angela','111']};
-                    if (typeof toolbaractive === 'undefined' || toolbaractive == 0 || typeof toolbaractivedisc === 'undefined' || toolbaractivedisc ==0){
+                    if (typeof toolbaractivedisc === 'undefined' || toolbaractivedisc ==0){
                         toolbaractivedisc = 1
                         wheretodisc = document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td");
 //above needs to change
                         tablestartdisc = document.createElement('td');
                         tablestartdisc.style = 'position:fixed;left:'+xioffsetdisc+'px;top:'+yioffsetdisc+'px;width:150px;border-top:0;border-style:solid;border-width:1px;border-color:#89978F;background:#99A992;border-width: 3px 1px 3px 2px;border-color: rgba(153, 169, 146, 1);'
-                        tablestartdisc.id='tablemaindisc';
+                        tablestartdisc.id = 'tablemaindisc';
                         tabletabledisc = document.createElement('table');
                         tabletabledisc.cellPadding = '0';
                         tableheaddisc = document.createElement('thead');
@@ -190,7 +190,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                         }
                     else{
                         toolbaractivedisc = 0;
-                        document.querySelector("body > td:nth-child(1)").remove()
+                        document.querySelector("#tablemaindisc").remove()
                         }
 
 
@@ -283,8 +283,8 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                         }
                     else{
                         toolbaractive = 0;
-                        document.querySelector("body > td").remove()
-                        document.querySelector("body > td:nth-child(1)").remove()
+                        document.querySelector("#tablemain").remove()
+                        document.querySelector("#tablemaindisc").remove()
                         }
 
 
