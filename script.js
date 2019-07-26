@@ -94,7 +94,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                     }
                 var xioffset = 1+(parseInt(getOffset(document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td > fieldset")).left,10) + parseInt(document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td > fieldset").attributes[0].ownerElement.scrollWidth,10))+2;
                 var yioffset = 5+getOffset(document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td > fieldset")).top;
-                var xioffsetdisc = 1+(parseInt(getOffset(document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td > fieldset")).left,10) + parseInt(document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td > fieldset").attributes[0].ownerElement.scrollWidth,10))+150;
+                var xioffsetdisc = 1+(parseInt(getOffset(document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td > fieldset")).left,10) + parseInt(document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td > fieldset").attributes[0].ownerElement.scrollWidth,10))+154;
                 var yioffsetdisc = 5+getOffset(document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td > fieldset")).top;
 
         /*        function importotherpeople(){
@@ -189,7 +189,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                         }
                     else{
                         toolbaractivedisc = 0;
-                        document.querySelector("body > td").remove()
+                        document.querySelector("body > td:nth-child(1)").remove()
                         }
 
 
@@ -282,6 +282,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                     else{
                         toolbaractive = 0;
                         document.querySelector("body > td").remove()
+                        document.querySelector("body > td:nth-child(1)").remove()
                         }
 
 
