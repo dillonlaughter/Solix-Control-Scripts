@@ -141,7 +141,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                         tablebodyarraydisc = []
                         eachelementdisc = []
                         for (i=0;i<Object.keys(discpeople).length;i++){
-                            if (i%2==0&&i>0){//i>3
+                            if (i%2==0&&i>-1){//i>3
                                 table_rowdisc = document.createElement('tr');
                                 table_rowdisc.style.background = '#EDEDC8';
                                 table_row1disc = document.createElement('td');
@@ -153,7 +153,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                                 table_rowdisc.appendChild(table_row1disc);
                                 tablebodyarraydisc.push(table_rowdisc)
                                 }
-                            if (i%2==1&&i>0){//i>3
+                            if (i%2==1&&i>-1){//i>3
                                 table_rowdisc = document.createElement('tr');
                                 table_rowdisc.style.background = '#FFFDF4';
                                 table_row1disc = document.createElement('td');
