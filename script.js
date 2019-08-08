@@ -376,6 +376,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
 
 
                             });
+                    }
 
 
 
