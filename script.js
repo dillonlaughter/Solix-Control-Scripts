@@ -391,7 +391,7 @@ document.querySelector("#ctl00_MainPlaceHolder_radtbDate_dateInput_text").stlye 
 //Auto-format Phone number
 if (document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody") != null) {
     //document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00__0 > td:nth-child(4)").style.width='5%';
-    document.querySelector("#countdownButton").focus()
+    document.querySelector("#ctl00_lblChangePassword > a").focus();
     for (i=0;i<document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows.length;i++){
         if (document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows[i].cells[3].innerText != " "){
             splicetemp = document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows[i].cells[3].innerText.split('');
