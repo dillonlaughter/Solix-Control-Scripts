@@ -286,7 +286,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                                 document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_LoginButton').click();
                         })})
 
-                        document.getElementById('discButton').addEventListener('click',function(event){
+                        document.querySelector("#tablemain > table > thead > tr > td > span").addEventListener('click',function(event){
                             event.preventDefault();
                             //##insert variable 'otherpeople' from github page
 
