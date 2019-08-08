@@ -49,7 +49,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                 side1.appendChild(MatBut);
                 side2.appendChild(fourthBut);
                 side2.appendChild(otherBut);
-                document.querySelector("#ctl00_GeneralContentPlaceHolder_lblHeader").appendChild(discBut);
+                document.querySelector("#tablemain > table > thead > tr > td > span").appendChild(discBut);
 // here is where button is currently located
                 awpath.appendChild(side1);
                 awpath.appendChild(side2);
