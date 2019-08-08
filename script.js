@@ -111,8 +111,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                 
               //  New branch for expired people
                         //##        var otherpeople = {'pres0704':['Dillon','Laughter@1'],'pres0714':['Patrick','Donner@1']};
-    //document.getElementById('discButton').addEventListener('click',function(event){
-                document.querySelector("#tablemain > table > thead > tr").addEventListener('click',function(event){
+                document.getElementById('discButton').addEventListener('click',function(event){
                     event.preventDefault();
                     //##insert variable 'otherpeople' from github page
 
