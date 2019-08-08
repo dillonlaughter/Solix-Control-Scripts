@@ -284,7 +284,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                         })})
 
                         
-                        document.querySelector("#tablemain > table > thead > tr > td > span").appendChild(discBut);
+                        document.querySelector("#ctl00_GeneralContentPlaceHolder_lblHeader").appendChild(discBut);
         // here is where button is currently located
                         
                         
