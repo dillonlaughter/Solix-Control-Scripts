@@ -50,7 +50,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                 side2.appendChild(fourthBut);
                 side2.appendChild(otherBut);
 
-                document.querySelector("#ctl00_GeneralContentPlaceHolder_lblHeader").appendChild(discBut);
+                //document.querySelector("#ctl00_GeneralContentPlaceHolder_lblHeader").appendChild(discBut);
 // here is where button is currently located
                                 
                 awpath.appendChild(side1);
@@ -113,96 +113,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                 
               //  New branch for expired people
                         //##        var otherpeople = {'pres0704':['Dillon','Laughter@1'],'pres0714':['Patrick','Donner@1']};
-                document.getElementById('discButton').addEventListener('click',function(event){
-                    event.preventDefault();
-                    //##insert variable 'otherpeople' from github page
 
-
-        //##            var otherpeople = {'pres0704':['Dillon','1'],'pres0714':['Patrick','11'],'pres0718':['Angela','111']};
-                    if (typeof toolbaractivedisc === 'undefined' || toolbaractivedisc ==0){
-                        toolbaractivedisc = 1
-                        wheretodisc = document.querySelector("#mainoutertable2 > tbody > tr:nth-child(3) > td");
-//above needs to change
-                        tablestartdisc = document.createElement('td');
-                        tablestartdisc.style = 'position:fixed;left:'+xioffsetdisc+'px;top:'+yioffsetdisc+'px;width:150px;border-top:0;border-style:solid;border-width:1px;border-color:#89978F;background:#99A992;border-width: 3px 1px 3px 2px;border-color: rgba(153, 169, 146, 1);'
-                        tablestartdisc.id = 'tablemaindisc';
-                        tabletabledisc = document.createElement('table');
-                        tabletabledisc.cellPadding = '0';
-                        tableheaddisc = document.createElement('thead');
-                        tableheaddisc.style = 'display:table-header-group;vertical-align:middle;border-color:#000;';
-                        tabletitledisc = document.createElement('tr');
-                        tabletitle1disc = document.createElement('td');
-                        tabletitle2disc = document.createElement('span');
-                        tabletitle1disc.align = 'center';
-                        tabletitle1disc.colspan = '2';
-                        tabletitle2disc.innerText = 'Previous Employees';
-                        tabletitle2disc.style = 'border-color:#000084;color: rgb(0, 0, 132);';
-                        //tabletitle2.style.padding = '4px';
-                        tablebodydisc = document.createElement('tbody');
-                        tablebodydisc.style = 'display:table-header-group;vertical-align:middle;border-color:#000';
-                        tablebodyarraydisc = []
-                        eachelementdisc = []
-                        for (i=0;i<Object.keys(discpeople).length;i++){
-                            if (i%2==0){//i>3
-                                table_rowdisc = document.createElement('tr');
-                                table_rowdisc.style.background = '#EDEDC8';
-                                table_row1disc = document.createElement('td');
-                                table_row1disc.align = 'center';
-                                table_row1disc.colspan = '2';
-                                table_row1disc.innerText = discpeople[Object.keys(discpeople)[i]][0];
-                                table_row1disc.id = 'toolbaroption_disc'+i;
-                                table_row1disc.style.padding = '4px';
-                                table_rowdisc.appendChild(table_row1disc);
-                                tablebodyarraydisc.push(table_rowdisc)
-                                }
-                            if (i%2==1){//i>3
-                                table_rowdisc = document.createElement('tr');
-                                table_rowdisc.style.background = '#FFFDF4';
-                                table_row1disc = document.createElement('td');
-                                table_row1disc.align = 'center';
-                            table_row1disc = document.createElement('td');
-                                table_row1disc.align = 'center';
-                                table_row1disc.colspan = '2';
-                                table_row1disc.innerText = discpeople[Object.keys(discpeople)[i]][0];
-                                table_row1disc.id = 'toolbaroption_disc'+i;
-                                table_row1disc.style.padding = '4px';
-                                table_rowdisc.appendChild(table_row1disc);
-                                tablebodyarraydisc.push(table_rowdisc)
-                                }
-                            }
-
-                        tablestartdisc.appendChild(tabletabledisc);
-                        tabletabledisc.appendChild(tableheaddisc);
-                        tabletabledisc.appendChild(tablebodydisc);
-                        tableheaddisc.appendChild(tabletitledisc);
-                        tabletitledisc.appendChild(tabletitle1disc);
-                        for (i=0;i<tablebodyarraydisc.length;i++){
-                            tablebodydisc.appendChild(tablebodyarraydisc[i]);
-                            }
-                        tabletitle1disc.appendChild(tabletitle2disc);
-                        document.querySelector("body").insertBefore(tablestartdisc,document.querySelector("#aspnetForm"))
-                        tabletitle1disc.style.paddingLeft = (((tablestartdisc.style.width.replace('px','') - tabletitle2disc.offsetWidth)/2) - 2).toString()+'px'
-                        tabletitle1disc.style.paddingRight = (((tablestartdisc.style.width.replace('px','') - tabletitle2disc.offsetWidth)/2) - 2).toString()+'px'
-
-                        for (i=0;i<tablebodyarraydisc.length;i++){
-                            eachelementdisc.push(document.getElementById('toolbaroption_disc'+(i+4)))
-                            }
-
-                        eachelementdisc.forEach(function(buttodisc,index){
-                            buttodisc.addEventListener('click', function() {
-                                document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_UserName').value = Object.keys(discpeople)[(index+4)];
-                                document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_Password').value = discpeople[Object.keys(discpeople)[(index+4)]][1];
-                                document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_LoginButton').click();
-                        })})                            
-                                
-                        }
-                    else{
-                        toolbaractivedisc = 0;
-                        document.querySelector("#tablemaindisc").remove()
-                        }
-
-
-                    });
                                 
                                 
                 
