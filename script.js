@@ -51,18 +51,7 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                 awpath.appendChild(side2);
                 awpath.deleteCell(0);
                 
-                //Auto-format Phone number
-                if (document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody") != null) {
-                    for (i=0;i<document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows.length;i++){
-                        if (document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows[i].cells[3].innerText != " "){
-                            splicetemp = document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows[i].cells[3].innerText.split('');
-                            splicetemp.splice(3,0,'-');
-                            splicetemp.splice(7,0,'-');
-                            document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows[i].cells[3].innerText = splicetemp.join('');
-                        }
-                    }
-                }
-                
+
                 document.getElementById("mattButton").addEventListener("click", function(event){
                     event.preventDefault();
                    var a=Object.keys(otherpeople)[1];
@@ -395,7 +384,18 @@ document.querySelector("#ctl00_MainPlaceHolder_radtbDate_wrapper > table > tbody
 document.querySelector("#ctl00_MainPlaceHolder_radtbDate_wrapper > table").style = 'width:130%';
 document.querySelector("#ctl00_MainPlaceHolder_radtbDate_dateInput_text").stlye = 'width:55%';
 
-
+//Auto-format Phone number
+if (document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody") != null) {
+    for (i=0;i<document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows.length;i++){
+        if (document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows[i].cells[3].innerText != " "){
+            splicetemp = document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows[i].cells[3].innerText.split('');
+            splicetemp.splice(3,0,'-');
+            splicetemp.splice(7,0,'-');
+            document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody").rows[i].cells[3].innerText = splicetemp.join('');
+        }
+    }
+}
+                
 
 //##add code here
 function reversefunction() {
