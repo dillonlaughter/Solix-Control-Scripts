@@ -524,3 +524,47 @@ for (i=0;i<$("td:contains(Complete)").length;i++) {
     ;}});
 }}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//href = /login.aspx?i=0?n=035
+
+//import other people
+if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx?i=1'){
+    function importotherpeople(){
+          document.body.appendChild(document.createElement('script')).src='https://combinatronics.com/dillonlaughter/Solix-Control-Scripts/master/Employees';}
+    importotherpeople();
+    setTimeout(LastFunc,1500);
+    function LastFunc() {
+        //set user and password to i=1 in otherpeople
+        //click on login
+        //go to solix main
+    alert('hi');       
+        
+        
+        //-- in solix main -- //
+        
+        //import otherpeople
+        //determine i value of other people
+        //determine N value for number of people
+        //count
+        // got to solix login i=i+1
+        //yay
+    }
+}
+    
