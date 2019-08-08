@@ -49,7 +49,10 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                 side1.appendChild(MatBut);
                 side2.appendChild(fourthBut);
                 side2.appendChild(otherBut);
-                
+
+                document.querySelector("#ctl00_GeneralContentPlaceHolder_lblHeader").appendChild(discBut);
+// here is where button is currently located
+                                
                 awpath.appendChild(side1);
                 awpath.appendChild(side2);
                 awpath.deleteCell(0);
@@ -283,10 +286,6 @@ if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx'){
                                 document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_LoginButton').click();
                         })})
 
-                        
-                        document.querySelector("#ctl00_GeneralContentPlaceHolder_lblHeader").appendChild(discBut);
-        // here is where button is currently located
-                        
                         
                         //##document.getElementById('toolbaroption_0').addEventListener('click',function(event){console.log('click')})
                         }
