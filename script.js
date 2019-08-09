@@ -524,27 +524,29 @@ document.getElementById('countdownButton').addEventListener('click',function(eve
     
     //document.querySelector("#ctl00_lblUserName")
     event.preventDefault();
-             var sp = '-';
-         var today = new Date();
-         var dd = today.getDate();
-         var mm = today.getMonth()+1;
-         var yyyy = today.getFullYear();
-         if(dd<10) dd='0'+dd;
-         if(mm<10) mm='0'+mm;
-         var curday = (yyyy + sp + mm + sp + dd + '-00-00-00');
-         document.getElementById('ctl00_MainPlaceHolder_radtbDate_dateInput').value = curday;
-         document.getElementById('ctl00_MainPlaceHolder_btnSearch').click();
-         var customers = 0
-         var finishvar = setInterval(finishstate,500);
+    var sp = '-';
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1;
+    var yyyy = today.getFullYear();
+    if(dd<10) dd='0'+dd;
+    if(mm<10) mm='0'+mm;
+    var curday = (yyyy + sp + mm + sp + dd + '-00-00-00');
+    document.getElementById('ctl00_MainPlaceHolder_radtbDate_dateInput').value = curday;
+    document.getElementById('ctl00_MainPlaceHolder_btnSearch').click();
+    var customers = 0
+    var finishvar = setInterval(finishstate,500);
     function finishstate(){
-for (i=0;i<$("td:contains(Complete)").length;i++) {
-    if ($("td:contains(Complete)")[i].offsetParent.id=='ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00'){
-        customers +=1}};if (customers != 0||customers != '0'){clearInterval(finishvar);alert(customers);
-                                                             window.location['href'] = 'https://solixlifeline.com/Login/Login.aspx?i='+(personnumber+1)};
-    ;}}
-    
-    
-    
+        for (i=0;i<$("td:contains(Complete)").length;i++) {
+            if ($("td:contains(Complete)")[i].offsetParent.id=='ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00'){
+            customers +=1
+        }
+    };
+    if (customers != 0||customers != '0'){
+        clearInterval(finishvar);
+        alert(customers);
+        window.location['href'] = 'https://solixlifeline.com/Login/Login.aspx?i='+(personnumber+1)
+    };
 });
 document.getElementById("countButton").addEventListener("click", function(event){
     event.preventDefault();
