@@ -544,7 +544,7 @@ document.getElementById('countdownButton').addEventListener('click',function(eve
             }
         }
 
-        if (customers != 0||customers != '0'){
+        if (customers != 0||customers != '0'||document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody")!=null){
             clearInterval(finishvar);
             alert(customers);
             window.location['href'] = 'https://solixlifeline.com/Login/Login.aspx?i='+(personnumber+1);
@@ -568,7 +568,7 @@ document.getElementById("countButton").addEventListener("click", function(event)
     function finishstate(){
 for (i=0;i<$("td:contains(Complete)").length;i++) {
     if ($("td:contains(Complete)")[i].offsetParent.id=='ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00'){
-        customers +=1}};if (customers != 0||customers != '0'){clearInterval(finishvar);alert(customers)};
+        customers +=1}};if (customers != 0||customers != '0'||document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody")!=null){clearInterval(finishvar);alert(customers)};
     ;}});
 }}
 }
