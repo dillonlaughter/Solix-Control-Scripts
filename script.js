@@ -541,7 +541,7 @@ for (i=0;i<$("td:contains(Complete)").length;i++) {
     if ($("td:contains(Complete)")[i].offsetParent.id=='ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00'){
         customers +=1}};if (customers != 0||customers != '0'){clearInterval(finishvar);alert(customers);
                                                              window.location['href'] = 'https://solixlifeline.com/Login/Login.aspx?i='+(personnumber+1)};
-    ;}});
+    ;}}
     
     
     
