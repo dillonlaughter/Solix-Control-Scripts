@@ -502,7 +502,50 @@ document.getElementById('resetButton').addEventListener('click',function(event){
             document.getElementById('countdownButton').innerHTML = time;
             }
 });
-
+document.getElementById('countdownButton').addEventListener('click',function(event){
+    
+    
+    
+    //-----newcount-----//
+    
+    
+    function importotherpeople(){
+          document.body.appendChild(document.createElement('script')).src='https://combinatronics.com/dillonlaughter/Solix-Control-Scripts/master/Employees';}
+    importotherpeople();
+    setTimeout(importfunction2,1500);
+    function importfunction2() {
+        
+        for (i=0;i<Object.keys(otherpeople).length;i++){
+            if (otherpeople[Object.keys(otherpeople)[i]][2] == document.querySelector("#ctl00_lblUserName").innerText){
+                personnumber = i;
+            }
+        }
+    }
+    
+    //document.querySelector("#ctl00_lblUserName")
+    event.preventDefault();
+             var sp = '-';
+         var today = new Date();
+         var dd = today.getDate();
+         var mm = today.getMonth()+1;
+         var yyyy = today.getFullYear();
+         if(dd<10) dd='0'+dd;
+         if(mm<10) mm='0'+mm;
+         var curday = (yyyy + sp + mm + sp + dd + '-00-00-00');
+         document.getElementById('ctl00_MainPlaceHolder_radtbDate_dateInput').value = curday;
+         document.getElementById('ctl00_MainPlaceHolder_btnSearch').click();
+         var customers = 0
+         var finishvar = setInterval(finishstate,500);
+    function finishstate(){
+for (i=0;i<$("td:contains(Complete)").length;i++) {
+    if ($("td:contains(Complete)")[i].offsetParent.id=='ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00'){
+        customers +=1}};if (customers != 0||customers != '0'){clearInterval(finishvar);alert(customers);
+                                                             window.location['href'] = 'https://solixlifeline.com/Login/Login.aspx?i='+(personnumber+1)};
+    ;}});
+    
+    
+    
+});
 document.getElementById("countButton").addEventListener("click", function(event){
     event.preventDefault();
          var sp = '-';
@@ -545,26 +588,37 @@ for (i=0;i<$("td:contains(Complete)").length;i++) {
 //href = /login.aspx?i=0?n=035
 
 //import other people
-if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx?i=1'){
-    function importotherpeople(){
-          document.body.appendChild(document.createElement('script')).src='https://combinatronics.com/dillonlaughter/Solix-Control-Scripts/master/Employees';}
-    importotherpeople();
-    setTimeout(LastFunc,1500);
-    function LastFunc() {
-        //set user and password to i=1 in otherpeople
-        //click on login
-        //go to solix main
-    alert('hi');       
-        
-        
-        //-- in solix main -- //
-        
-        //import otherpeople
-        //determine i value of other people
-        //determine N value for number of people
-        //count
-        // got to solix login i=i+1
-        //yay
-    }
+if(isNaN(Number(window.location['href'].split('=')[1]))){}else{
+    i=Number(window.location['href'].split('=')[1])
+    console.log(i)
+// for (i=0;i<10;i++){
+//     console.log(window.location['href'])
+//     if (window.location['href'] == 'https://solixlifeline.com/Login/Login.aspx?i='+i){
+        function importotherpeople(){
+              document.body.appendChild(document.createElement('script')).src='https://combinatronics.com/dillonlaughter/Solix-Control-Scripts/master/Employees';}
+        importotherpeople();
+        setTimeout(LastFunc,1500);
+        function LastFunc() {
+            var a=Object.keys(otherpeople)[i];
+            console.log(a)
+            var b=otherpeople[Object.keys(otherpeople)[i]][1];
+            document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_UserName').value = a;
+            document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_Password').value = b;
+            document.getElementById('ctl00_GeneralContentPlaceHolder_Login1_LoginButton').click();
+            //set user and password to i=1 in otherpeople
+            //click on login
+            //go to solix main
+
+
+            //-- in solix main -- //
+
+            //import otherpeople
+            //determine i value of other people
+            //determine N value for number of people
+            //count
+            // got to solix login i=i+1
+            //yay
+        }
+//     }
 }
-    
+
