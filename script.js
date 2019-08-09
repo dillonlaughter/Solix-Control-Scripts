@@ -503,6 +503,7 @@ document.getElementById('resetButton').addEventListener('click',function(event){
             }
 });
 document.getElementById('countdownButton').addEventListener('click',function(event){
+    event.preventDefault();
     
     
     
@@ -523,7 +524,7 @@ document.getElementById('countdownButton').addEventListener('click',function(eve
     }
     
     //document.querySelector("#ctl00_lblUserName")
-    event.preventDefault();
+    
     var sp = '-';
     var today = new Date();
     var dd = today.getDate();
@@ -539,14 +540,16 @@ document.getElementById('countdownButton').addEventListener('click',function(eve
     function finishstate(){
         for (i=0;i<$("td:contains(Complete)").length;i++) {
             if ($("td:contains(Complete)")[i].offsetParent.id=='ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00'){
-            customers +=1
+                customers +=1;
+            }
         }
-    };
-    if (customers != 0||customers != '0'){
-        clearInterval(finishvar);
-        alert(customers);
-        window.location['href'] = 'https://solixlifeline.com/Login/Login.aspx?i='+(personnumber+1)
-    };
+
+        if (customers != 0||customers != '0'){
+            clearInterval(finishvar);
+            alert(customers);
+            window.location['href'] = 'https://solixlifeline.com/Login/Login.aspx?i='+(personnumber+1);
+        }
+    }
 });
 document.getElementById("countButton").addEventListener("click", function(event){
     event.preventDefault();
