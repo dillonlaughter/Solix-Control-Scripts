@@ -546,7 +546,7 @@ document.getElementById('countdownButton').addEventListener('click',function(eve
 
         if (customers != 0||customers != '0'||document.querySelector("#ctl00_MainPlaceHolder_radgrdSearchRetailCustomers_ctl00 > tbody")!=null){
             clearInterval(finishvar);
-            alert(customers);
+            alert(document.querySelector("#ctl00_lblUserName").innerText+' did '+customers);
             window.location['href'] = 'https://solixlifeline.com/Login/Login.aspx?i='+(personnumber+1);
         }
     }
