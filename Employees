@@ -3,12 +3,12 @@ var otherpeople = {
   'pres0715' : ['Matt'      , 'Adame@11'    , 'Matthew Adame'],
   'pres0718' : ['Angela'    , 'Hurley@1'    , 'Angela Marechaux'],
   'pres0720' : ['Allen'     , 'Borillo@1'   , 'Allen Borillo'],
-  'pres0724' : ['Albert'    , 'Song@111'    , 'Albert Song'],
-  'pres0723' : ['Carlos'    , 'Surian@1'    , 'Carlos Surian'],
-  'pres0726' : ['Mauricio'  , 'Flores@1'    , 'Walter Flores']
+  'pres0723' : ['Carlos'    , 'Surian@1'    , 'Carlos Surian']
   }
 var discpeople = {
   'pres0721' : ['Alicia' , 'Altamirano@1'],
   'pres0722' : ['Jorge' , 'Cuellar@1'],
+  'pres0724' : ['Albert'    , 'Song@111'    , 'Albert Song'],
+  'pres0726' : ['Mauricio'  , 'Flores@1'    , 'Walter Flores'],
   'pres0714' : ['Patrick' , 'Donner@1']
   }
