@@ -2,7 +2,8 @@ var otherpeople = {
   'pres0704' : ['Dillon'    , 'Laughter@2'  , 'Dillon Laughter'],
   'pres0715' : ['Matt'      , 'Adame@33'    , 'Matthew Adame'],
   'pres0718' : ['Angela'    , 'Hurley@2'    , 'Angela Marechaux'],
-  'pres0740' : ['Veronica'   , 'Payan@11'    , 'Veronica Payan']
+  'pres0740' : ['Veronica'  , 'Payan@11'    , 'Veronica Payan'],
+  'pres0741' : ['Josie'     , 'Rodriguez@1' , 'Jocelyn Rodriguez']
   }
 var discpeople = {
   'pres0720' : ['Allen'     , 'Borillo@2'   , 'Allen Borillo'],
