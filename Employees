@@ -1,5 +1,5 @@
 var otherpeople = {
-  'pres0704' : ['Dillon'    , 'Laughter@2'  , 'Dillon Laughter'],
+  'pres1503' : ['Dillon'    , 'Laughter@2'  , 'Dillon Laughter'],
   'pres0715' : ['Matt'      , 'Adame@33'    , 'Matthew Adame'],
   'pres0718' : ['Angela'    , 'Hurley@2'    , 'Angela Marechaux'],
   'pres0740' : ['Veronica'  , 'Payan@11'    , 'Veronica Payan'],
@@ -20,5 +20,10 @@ var discpeople = {
   'pres0714' : ['Patrick'   , 'Donner@1'],
   'pres0735' : ['Mellisa'   , 'Yildiz@1'    , 'Mellisa Yildiz'],
   'pres0738' : ['Christina' , 'Williams@1'  , 'Christina Williams'],
-  'pres0739' : ['Nicole'    , 'Johnson@1'   , 'Nicole Johnson']
+  'pres0739' : ['Nicole'    , 'Johnson@1'   , 'Nicole Johnson'],
+  'pres0704' : ['Dillon'    , 'Laughter@3'  , 'Dillon Laughter'],
+  'pres0715' : ['Matt'      , 'Adame@33'    , 'Matthew Adame'],
+  'pres0718' : ['Angela'    , 'Hurley@2'    , 'Angela Marechaux'],
+  'pres0740' : ['Veronica'  , 'Payan@11'    , 'Veronica Payan'],
+  'pres0741' : ['Josie'     , 'Rodriguez@1' , 'Jocelyn Rodriguez]
   }
