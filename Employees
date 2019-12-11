@@ -5,7 +5,7 @@ var otherpeople = {
   'pres1504' : ['Veronica'  , 'Payan@11'    , 'Veronica Payan'],
   'pres1506' : ['Josie'     , 'Rodriguez@1' , 'Jocelyn Rodriguez'],
   'pres1507' : ['Spencer'   , 'Vatani@1'    , 'Spencer Vatani'],
-  'pres1505' : ['Geneane'   , '???' , 'Geneane XXX']
+  'pres1505' : ['Geneane'   , 'Haley@11'    , 'Geneane Haley']
   }
 var discpeople = {
   'pres0720' : ['Allen'     , 'Borillo@2'   , 'Allen Borillo'],
