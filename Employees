@@ -1,7 +1,7 @@
 var otherpeople = {
   'pres1503' : ['Dillon'    , 'Laughter@2'  , 'Dillon Laughter'],
   'pres1502' : ['Matt'      , 'Adame@11'    , 'Matthew Adame'],
-  'pres1500x' : ['Angela'    , 'Hurley@2'    , 'Angela Marechaux'],
+  'pres1500' : ['Angela'    , 'Hurley@2'    , 'Angela Marechaux'],
   'pres1506' : ['Josie'     , 'Rodriguez@1' , 'Jocelyn Rodriguez']
   }
 
